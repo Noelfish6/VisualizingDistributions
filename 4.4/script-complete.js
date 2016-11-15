@@ -8,7 +8,7 @@ var width = document.getElementsByClassName('canvas')[0].clientWidth - margin.l 
 
 var numOfTrials = 500;
 
-//Part 1: visualize Math.random()
+
 var plot1 = d3.select('#random').select('.canvas')
     .append('svg')
     .attr('width',width+margin.l+margin.r)
@@ -16,15 +16,7 @@ var plot1 = d3.select('#random').select('.canvas')
     .append('g')
     .attr('transform','translate('+ margin.l+','+margin.t+')');
 
-/*for(var i = 0; i<numOfTrials; i++){
-    var result = Math.random();
 
-    plot1.append('circle')
-        .attr('cy',height/2+(Math.random() -.5)*50)
-        .attr('cx',result/1 * width)
-        .attr('r',3)
-        .style('fill-opacity',.2);
-}*/
 var i = 0;
 
 setInterval(runTrial,50);
@@ -50,7 +42,6 @@ function runTrial(){
 
 
 
-//Part 2: visualize a normal distribution
 var plot2 = d3.select('#normal-dist').select('.canvas')
     .append('svg')
     .attr('width',width+margin.l+margin.r)
